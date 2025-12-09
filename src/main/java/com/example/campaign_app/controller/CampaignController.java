@@ -27,10 +27,16 @@ public class CampaignController {
 
     @PostMapping
     public ResponseEntity<Campaign> createCampaign(@Valid @RequestBody Campaign campaign) {
-        // Not having log system.
         Long accountId = 1L;
 
         Campaign createdCampaign = campaignService.createCampaign(campaign, accountId);
         return new ResponseEntity<>(createdCampaign, HttpStatus.CREATED);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteCampaign(@PathVariable Long id) {
+        campaignService.deleteCampaign(id);
+        return ResponseEntity.noContent().build();
+    }
+
 }

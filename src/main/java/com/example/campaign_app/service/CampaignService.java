@@ -41,4 +41,11 @@ public class CampaignService {
         campaign.setEmeraldAccount(account);
         return campaignRepository.save(campaign);
     }
+
+
+    public void deleteCampaign(Long id) {
+        campaignRepository.deleteById(id);
+    }
+
+
 }
