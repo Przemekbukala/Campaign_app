@@ -6,7 +6,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
-
+/**
+ * REST Controller responsible for managing Emerald Account operations.
+ * Currently, it exposes endpoints to retrieve account details.
+ */
 @RestController
 @RequestMapping("/api/account")
 @CrossOrigin(origins = "*")

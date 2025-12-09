@@ -9,6 +9,7 @@ import { Campaign, CampaignStatus } from '../types';
 const TOWNS = ["Warsaw", "Krakow", "Gdansk", "Wroclaw", "Poznan","Egipt", "Sandomierz"];
 const KEYWORDS_LIST = ["Shoes", "Sport", "Sale", "Summer", "Winter", "Discount","Holidays"];
 const STATUSES = [CampaignStatus.ON, CampaignStatus.OFF];
+const API_URL = "https://campaign-app-5j95.onrender.com";
 
 interface Props {
     onCampaignAdded: () => void;
@@ -52,7 +53,7 @@ const CampaignForm: React.FC<Props> = ({ onCampaignAdded }) => {
         }
 
         try {
-            await axios.post("http://localhost:8080/api/campaigns", formData);
+            await axios.post(`${API_URL}/api/campaigns`, formData);
             onCampaignAdded();
             setFormData(initialState);
         } catch (error) {

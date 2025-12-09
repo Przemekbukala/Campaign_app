@@ -8,7 +8,10 @@ import lombok.*;
 
 import java.math.BigDecimal;
 import java.util.Set;
-
+/**
+ * Entity representing a marketing campaign in the system.
+ * It holds information about the campaign configuration and the association with an Emerald Account.
+ */
 @Entity
 @Table(name = "campaign")
 @Getter

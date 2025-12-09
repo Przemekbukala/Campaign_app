@@ -4,7 +4,9 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.math.BigDecimal;
 import java.util.List;
-
+/**
+ * Entity representing the main Emerald Account in the system.
+ */
 @Entity
 @Table(name = "emerald_account")
 @Getter

@@ -6,9 +6,12 @@ import jakarta.validation.Valid; // Import do walidacji (@NotNull, @Min)
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
+/**
+ * REST Controller responsible for managing marketing campaigns.
+ * Exposes endpoints for creating, retrieving, and deleting campaigns.
+ */
 @RestController
 @RequestMapping("/api/campaigns")
 @CrossOrigin(origins = "*")

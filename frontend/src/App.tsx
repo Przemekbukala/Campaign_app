@@ -8,18 +8,20 @@ import { Campaign } from "./types";
 import { Grid } from "@mui/material";
 
 
+const API_URL = "https://campaign-app-5j95.onrender.com";
+
 function App() {
     const [campaigns, setCampaigns] = useState<Campaign[]>([]);
     const [balance, setBalance] = useState<number>(0);
 
     const fetchCampaigns = () => {
-        axios.get<Campaign[]>("http://localhost:8080/api/campaigns")
+        axios.get<Campaign[]>(`${API_URL}/api/campaigns`)
             .then(res => setCampaigns(res.data))
             .catch(err => console.error(err));
     };
 
     const fetchBalance = () => {
-        axios.get<number>("http://localhost:8080/api/account/1")
+        axios.get<number>(`${API_URL}/api/account/1`)
             .then(res => setBalance(res.data))
             .catch(err => console.error("Cannot get a balance", err));
     };
@@ -33,7 +35,7 @@ function App() {
     }, []);
 
     const handleDelete = (id: number) => {
-        axios.delete(`http://localhost:8080/api/campaigns/${id}`)
+        axios.delete(`${API_URL}/api/campaigns/${id}`)
             .then(() => {
                 refreshAll();
             })
