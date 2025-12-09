@@ -47,15 +47,11 @@ function App() {
     return (
         <Container maxWidth="md" sx={{ mt: 4 }}>
             <Box textAlign="center" mb={4}>
-                <Typography variant="h3" component="h1" color="primary" gutterBottom>
-                    Emerald Account Manager
-                </Typography>
-
                 <Box display="flex" justifyContent="center" mb={2}>
                     <Card  elevation={6} className="emerald-card">
                         <CardContent>
                             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                                Emerald Account
+                                Account
                             </Typography>
                             <Typography variant="h4" component="div" color="success.main" fontWeight="bold">
                                 {balance.toFixed(2)} PLN
