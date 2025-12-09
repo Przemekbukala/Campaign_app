@@ -8,8 +8,7 @@ import { Campaign } from "./types";
 import { Grid } from "@mui/material";
 
 
-const API_URL = "https://campaign-app-5j95.onrender.com";
-
+const API_URL = "https://campaign-app-1.onrender.com";
 function App() {
     const [campaigns, setCampaigns] = useState<Campaign[]>([]);
     const [balance, setBalance] = useState<number>(0);

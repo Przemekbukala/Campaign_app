@@ -9,7 +9,7 @@ import { Campaign, CampaignStatus } from '../types';
 const TOWNS = ["Warsaw", "Krakow", "Gdansk", "Wroclaw", "Poznan","Egipt", "Sandomierz"];
 const KEYWORDS_LIST = ["Shoes", "Sport", "Sale", "Summer", "Winter", "Discount","Holidays"];
 const STATUSES = [CampaignStatus.ON, CampaignStatus.OFF];
-const API_URL = "https://campaign-app-5j95.onrender.com";
+const API_URL = "https://campaign-app-1.onrender.com";
 
 interface Props {
     onCampaignAdded: () => void;
