@@ -22,7 +22,7 @@ Check out the deployed application:
 - **Axios**
 
 
-## ⚙️ How to Run Locally
+##  How to Run Locally
 
 ### 1. Backend and Frontend Setup
 
